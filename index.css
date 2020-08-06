@@ -1,0 +1,262 @@
+html,
+body,
+h1, h2, h3 {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #dfe5ec;;
+    font: 13px/18px Tahoma,sans-serif,Arial,Helvetica;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-family: Tahoma, sans-serif, Arial, Helvetica;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header {
+    background-color: #5682A3;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    margin: 0 auto;
+    max-width: 1010px;
+}
+
+.header_logo {
+    width: 31%;
+    color: #fff;
+    padding: 17px 20px 15px 22px;
+    display: flex;
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: top;
+}
+
+.header_logo:hover {
+    background-color: #497799;
+}
+
+.header_logo:hover .hamburger-line:nth-child(1) {
+    transform: translateY(-1px);
+}
+
+.header_logo:hover .hamburger-line:nth-child(3) {
+    transform: translateY(1px);
+}
+
+.icon-tg-title {
+    background-image: url("https://web.telegram.org/img/Telegram.svg");
+    width: 62px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-top: 1px;
+}
+
+.hamburger {
+    height: 14px;
+    width: 18px;
+    margin-right: 40px;
+}
+
+.hamburger-line {
+    background: #fff;
+    display: block;
+    height: 2px;
+    margin: 0;
+}
+
+.hamburger-line:nth-child(2) {
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.header_main {
+    align-items: center;
+    display: flex;
+    width: 69%;
+}
+
+.head_info {
+    color: #b9cfe3;
+    padding: 15px 19px 15px;
+    width: 100%;
+}
+
+.head_info:hover {
+    background-color: #497799;
+    color: #fff;
+}
+
+.head_title {
+    color: #fff;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.search_btn {
+    padding: 15px 19px;
+}
+
+.search_btn:hover {
+    background-color: #497799;
+}
+
+.icon_search {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url(https://web.telegram.org/img/icons/IconsetW.png);
+    background-repeat: no-repeat;
+    background-position: -12px -1037px;
+    vertical-align: middle;
+    opacity: 0.9;
+}
+
+.icon-bar {
+    display: block;
+    background-color: #d7e5f0;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.dropdown_toggle {
+    padding: 15px 19px;
+}
+
+.dropdown_toggle:hover {
+    background-color: #497799;
+}
+
+.icon-bar + .icon-bar {
+    margin-top: 2px;
+}
+
+.main_content {
+    display: flex;
+    background: #fff;
+    max-width: 1010px;
+    min-width: 300px;
+    margin: 0 auto;
+    border-left: 1px solid #dfe5ec;
+    border-right: 1px solid #dfe5ec;
+}
+
+.dialogs {
+    width: 31%;
+    border-right: 2px solid #E9EBED;
+}
+
+.dialogs_search {
+    padding: 12px;
+}
+
+.dialogs_search_field {
+    font-size: 12px;
+    line-height: normal;
+    border: 1px solid #F2F2F2;
+    border-radius: 2px;
+    padding: 6px 26px 6px 30px;
+    margin: 0;
+    background-color: #F2F2F2;
+    background-image: url(https://web.telegram.org/img/icons/IconsetW.png);
+    background-repeat: no-repeat;
+    background-position: -6px -205px;
+    width: 100%;
+    height: 34px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15;
+}
+
+.dialogs_search_field:focus,
+.dialogs_search_field:active {
+    background-color: #fff;
+}
+
+.dialogs_search_field:focus {
+    border: 1px solid #d9dbde;
+    outline: 0;
+}
+
+.dialogs_search_field::placeholder {
+    color: #9AA2AB;
+}
+
+.dialog {
+    display: flex;
+    padding: 7px 16px;
+}
+
+.dialog_photo {
+    margin-right: 15px;
+}
+
+.dialog_user_photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.dialog_message {
+    width: 100%;
+}
+
+.user_name {
+    color: #222;
+    font-weight: 700;
+    margin: 3px 0;
+}
+
+.dialog_chat {
+    margin-top: 5px;
+}
+
+.message_from {
+    color: #3a6d99;
+}
+
+.message_text {
+    color: #698192;
+}
+
+.dialog_meta {
+    text-align: right;
+}
+
+.message_time {
+    color: #b3b3b3;
+    font-size: .85em;
+    width: max-content;
+}
+
+.dialog_unread {
+    background: #64c270;
+    font-size: 11px;
+    padding: 5px;
+    border-radius: 11px;
+    min-width: 21px;
+    text-align: center;
+    margin-top: 4px;
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+
+}
