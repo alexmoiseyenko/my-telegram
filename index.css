@@ -19,6 +19,8 @@ body{
     font-weight: normal;
     font-stretch: normal;
     font-family: Tahoma, sans-serif, Arial, Helvetica;
+    overflow: hidden;
+    user-select: none;
 }
 
 ul {
@@ -199,9 +201,20 @@ ul {
     color: #9AA2AB;
 }
 
+.dialog_list {
+    cursor: pointer;
+}
+
 .dialog {
     display: flex;
     padding: 7px 16px;
+    height: 62px;
+}
+
+.active {
+    background-color: #6490b1;
+    padding-right: 18px;
+    margin-right: -2px;
 }
 
 .dialog_photo {
@@ -216,6 +229,8 @@ ul {
 
 .dialog_message {
     width: 100%;
+    height: 44px;
+    overflow: hidden;
 }
 
 .user_name {
@@ -246,8 +261,7 @@ ul {
     width: max-content;
 }
 
-.dialog_unread {
-    background: #64c270;
+.badge {
     font-size: 11px;
     padding: 5px;
     border-radius: 11px;
@@ -258,5 +272,96 @@ ul {
     font-weight: 700;
     color: #fff;
     line-height: 1;
+}
 
+.dialog_unread_green {
+    background: #64c270;
+}
+
+.dialog_unread_gray {
+    background: #bfbfbf;
+}
+
+.message_active {
+    color: #fff;
+}
+
+.history {
+    width: 69%;
+}
+
+.send_panel {
+    max-width: 554px;
+    margin: 0 auto;
+    padding: 10px 15px 30px;
+    height: 97px;
+}
+
+.composer_rich_textarea {
+    left: -15px;
+    width: calc(100% + 30px);
+    padding-left: 17px;
+    padding-right: 43px;
+}
+
+.composer_rich_textarea::before {
+    content: attr(placeholder);
+    color: #9aa2ab;
+    display: block;
+    margin-top: -1px;
+    margin-left: 1px;
+    pointer-events: none;
+}
+
+.message {
+    max-width: 560px;
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+}
+
+.content_message {
+    display: flex;
+    margin: 8px 10px 8px 16px;
+}
+
+.message_photo {
+    margin: 0 15px 0 0;
+}
+
+.message_from_photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.message_body {
+    width: 100%;
+}
+
+.empty_img {
+    margin-left: 57px;
+}
+
+.message_author {
+    color: #3a6d99;
+    font-weight: 700;
+    margin: 1px 0 4px;
+}
+
+.message_image {
+    width: 260px;
+}
+
+.message_date {
+    color: #adadad;
+    font-size: .85em;
+    width: max-content;
+}
+
+.panel_photo {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
 }
