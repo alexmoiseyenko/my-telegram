@@ -20,7 +20,6 @@ body{
     font-stretch: normal;
     font-family: Tahoma, sans-serif, Arial, Helvetica;
     overflow: hidden;
-    user-select: none;
 }
 
 ul {
@@ -37,6 +36,7 @@ ul {
     height: 48px;
     margin: 0 auto;
     max-width: 1010px;
+    user-select: none;
 }
 
 .header_logo {
@@ -165,6 +165,7 @@ ul {
 .dialogs {
     width: 31%;
     border-right: 2px solid #E9EBED;
+    user-select: none;
 }
 
 .dialogs_search {
@@ -290,6 +291,10 @@ ul {
     width: 69%;
 }
 
+.history_messages {
+    height: 428px;
+}
+
 .send_panel {
     max-width: 554px;
     margin: 0 auto;
@@ -297,11 +302,33 @@ ul {
     height: 97px;
 }
 
+.send_field {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.right_photo {
+    margin-right: 17px;
+}
+
+.send_form {
+    width: 100%;
+    max-width: 382px;
+}
+
 .composer_rich_textarea {
-    left: -15px;
-    width: calc(100% + 30px);
-    padding-left: 17px;
-    padding-right: 43px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    outline: none;
+    box-shadow: 0 1px 0 0 #e8e8e8;
+    min-height: 52px;
+    margin-bottom: 13px;
+}
+
+.composer_rich_textarea:focus {
+    box-shadow: 0 2px 0 0 #77b7e4;
 }
 
 .composer_rich_textarea::before {
@@ -313,10 +340,16 @@ ul {
     pointer-events: none;
 }
 
+
+.left_photo {
+    margin-left: 21px;
+}
+
 .message {
     max-width: 560px;
     padding: 0 15px 0 15px;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .content_message {
@@ -364,4 +397,96 @@ ul {
     line-height: 52px;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.composer_emoji_insert_btn {
+    cursor: pointer;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    display: block;
+    opacity: 1;
+}
+
+.icon-emoji {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    opacity: .8;
+    background-image: url(https://web.telegram.org/img/icons/General.png);
+    background-repeat: no-repeat;
+    background-position: -9px -335px;
+}
+
+.send_buttons {
+    display: flex;
+}
+
+.attach {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    width: 18px;
+    height: 17px;
+    margin-right: 28px;
+    margin-top: 6px;
+}
+
+.icon_paperclip {
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+    opacity: 0.8;
+    background-image: url("https://web.telegram.org/img/icons/General.png");
+    background-repeat: no-repeat;
+    background-position: -11px -455px;
+}
+
+.media_attach {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    width: 20px;
+    height: 18px;
+    margin-top: 5px;
+    margin-right: 25px;
+}
+
+.icon_camera {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    opacity: 0.8;
+    background-image: url("https://web.telegram.org/img/icons/General.png");
+    background-repeat: no-repeat;
+    background-position: -10px -399px;
+}
+
+.record {
+    width: 18px;
+    height: 23px;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.icon_mic {
+    display: inline-block;
+    width: 18px;
+    height: 22px;
+    opacity: 0.8;
+    background-image: url("https://web.telegram.org/img/icons/IconsetW.png");
+    background-repeat: no-repeat;
+    background-position: -12px -285px;
+    background-color: transparent
+}
+
+.submit_send {
+    border: none;
+    background: #fff;
+    color: #499dd9;
+    font-weight: bold;
 }
