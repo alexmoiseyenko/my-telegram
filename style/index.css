@@ -172,6 +172,10 @@ ul {
     padding: 12px;
 }
 
+.dialog_col {
+    height: 464px;
+}
+
 .dialogs_search_field {
     font-size: 12px;
     line-height: normal;
@@ -204,6 +208,9 @@ ul {
 
 .dialog_list {
     cursor: pointer;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .dialog {
@@ -292,7 +299,8 @@ ul {
 }
 
 .history_messages {
-    height: 428px;
+    height: 404px;
+    overflow-y: auto;
 }
 
 .send_panel {
@@ -325,21 +333,22 @@ ul {
     box-shadow: 0 1px 0 0 #e8e8e8;
     min-height: 52px;
     margin-bottom: 13px;
+    position: relative;
 }
 
-.composer_rich_textarea:focus {
+.form_textarea {
+    font-size: 12px;
+    line-height: 1.42857143;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.form_textarea:focus {
     box-shadow: 0 2px 0 0 #77b7e4;
 }
-
-.composer_rich_textarea::before {
-    content: attr(placeholder);
-    color: #9aa2ab;
-    display: block;
-    margin-top: -1px;
-    margin-left: 1px;
-    pointer-events: none;
-}
-
 
 .left_photo {
     margin-left: 21px;
@@ -408,6 +417,9 @@ ul {
     margin-top: 1px;
     display: block;
     opacity: 1;
+    position: absolute;
+    right: 3px;
+    top: 2px;
 }
 
 .icon-emoji {
